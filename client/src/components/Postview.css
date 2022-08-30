@@ -1,3 +1,39 @@
 /* .site-container{
 border:1px solid black;
 } */
+
+.paginationbtns {
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid black; */
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 23px;
+  
+  }
+  
+  .paginationbtns a {
+    padding: 10px;
+    margin: 8px;
+    cursor: pointer;
+    color: grey;
+  }
+  
+  .paginationbtns a:hover {
+    color: #2DA5FC;
+    background-color: whitesmoke
+  }
+  
+  .paginationactive a {
+    color: #2DA5FC;
+    background: rgb(11, 167, 240)
+    
+  }
+
+  .paginationdisabled{
+    pointer-events: none;
+  cursor: default;
+  }
