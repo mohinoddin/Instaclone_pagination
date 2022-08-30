@@ -5,7 +5,7 @@ const postModal = require('./modals/postSchema')
 var moment = require('moment');
 const multer =require("multer");
 const fs = require("fs");
-
+require('dotenv').config(); 
 app.use(express.static(__dirname+"/uploads/"))
 app.use(express.json({limit: "30mb", extended: true}))
 const cors=require("cors");
@@ -33,7 +33,7 @@ app.listen(process.env.PORT || 3001, (err)=> {
 // });
 
 //mongo db connection
-const url = "mongodb+srv://mohinoddin:Mohin9050@cluster0.lpuvj.mongodb.net/instaclone?retryWrites=true&w=majority"
+const url = process.env.MONGO_URI
 mongoose.connect(url,{ 
     useNewUrlParser: true, 
  
